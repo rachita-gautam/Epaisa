@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "462375149446",
+    "firebase_url": "https://epaisabloc.firebaseio.com",
+    "project_id": "epaisabloc",
+    "storage_bucket": "epaisabloc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462375149446:android:2f4824d7cfbb1c342f5607",
+        "android_client_info": {
+          "package_name": "com.example.FirebaseUserSignIn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462375149446-5c1icre71i1a6afto7pbjiupo3gubrde.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLtZax_Ddw5wZZ3BycLKoNePpjS1rSyJg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462375149446-5c1icre71i1a6afto7pbjiupo3gubrde.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
