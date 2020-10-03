@@ -3,6 +3,7 @@ import 'package:FirebaseUserSignIn/blocs/loginBloc/login_state.dart';
 import 'package:FirebaseUserSignIn/repositories/user_repository.dart';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
+import 'login_state.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   UserRepository userRepository;

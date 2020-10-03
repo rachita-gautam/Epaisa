@@ -2,6 +2,7 @@ import 'package:FirebaseUserSignIn/blocs/loginBloc/login_bloc.dart';
 import 'package:FirebaseUserSignIn/blocs/loginBloc/login_event.dart';
 import 'package:FirebaseUserSignIn/blocs/loginBloc/login_state.dart';
 import 'package:FirebaseUserSignIn/repositories/user_repository.dart';
+import 'package:FirebaseUserSignIn/ui/pages/ForgetPassword_page.dart';
 import 'package:FirebaseUserSignIn/ui/pages/home_page.dart';
 import 'package:FirebaseUserSignIn/ui/pages/signup_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -101,6 +102,21 @@ class LoginPAge extends StatelessWidget {
                   keyboardType: TextInputType.visiblePassword,
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Container(
+                  width: double.infinity,
+                  child: InkWell(
+                    child: Text(
+                      "Forget Password",
+                      textAlign: TextAlign.right,
+                    ),
+                    onTap: () {
+                      navigateToForgetPasswordScreen(context);
+                    },
+                  ),
+                ),
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
@@ -183,5 +199,14 @@ class LoginPAge extends StatelessWidget {
     Navigator.of(context).push(MaterialPageRoute(builder: (context) {
       return SignUpPageParent(userRepository: userRepository);
     }));
+  }
+
+  void navigateToForgetPasswordScreen(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => ForgetPasswordParent(),
+      ),
+    );
   }
 }

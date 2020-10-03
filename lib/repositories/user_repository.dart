@@ -119,4 +119,10 @@ class UserRepository {
   Future<FirebaseUser> getCurrentUser() async {
     return await FirebaseAuth.instance.currentUser();
   }
+
+  //forget password
+  Future<void> resetPassword(String email) async {
+    await firebaseAuth.sendPasswordResetEmail(email: email);
+    // .then((value) => "check your mails");
+  }
 }

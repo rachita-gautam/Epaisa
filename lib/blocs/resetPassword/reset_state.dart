@@ -2,34 +2,34 @@ import 'package:equatable/equatable.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:meta/meta.dart';
 
-abstract class LoginState extends Equatable {}
+abstract class ResetState extends Equatable {}
 
-class LoginInitialState extends LoginState {
+class ResetPasswordInitialState extends ResetState {
   @override
   // TODO: implement props
   List<Object> get props => null;
 }
 
-class LoginLoadingState extends LoginState {
+class ResetPasswordLoadingState extends ResetState {
   @override
   // TODO: implement props
   List<Object> get props => null;
 }
 
-class LoginSuccessState extends LoginState {
-  FirebaseUser user;
-
-  LoginSuccessState(@required this.user);
+class ResetPasswordSuccessState extends ResetState {
+  // FirebaseUser user;
+  //
+  // ResetPasswordSuccessState(@required this.user);
 
   @override
   // TODO: implement props
   List<Object> get props => null;
 }
 
-class LoginFailState extends LoginState {
+class ResetPasswordFailState extends ResetState {
   String message;
 
-  LoginFailState(@required this.message);
+  ResetPasswordFailState(@required this.message);
 
   @override
   // TODO: implement props

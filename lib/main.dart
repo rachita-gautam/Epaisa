@@ -9,17 +9,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'blocs/authBloc/auth_event.dart';
 import 'package:meta/meta.dart';
 
-
-
-void main(){
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
-
 }
 
 class MyApp extends StatelessWidget {
-
-
   UserRepository userRepository = UserRepository();
 
   @override
@@ -30,18 +25,20 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: BlocProvider(
-        create: (context) => AuthBloc(userRepository: userRepository)..add(AppStartedEvent()),
-        child: Appp(userRepository: userRepository,),
+        create: (context) =>
+            AuthBloc(userRepository: userRepository)..add(AppStartedEvent()),
+        child: App(
+          userRepository: userRepository,
+        ),
       ),
     );
   }
 }
 
-class Appp extends StatelessWidget {
-
+class App extends StatelessWidget {
   final UserRepository userRepository;
 
-  Appp({@required this.userRepository});
+  App({@required this.userRepository});
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +47,8 @@ class Appp extends StatelessWidget {
         if (state is AuthInitialState) {
           return SplashPage();
         } else if (state is AuthenticatedState) {
-          return HomePageParent(user: state.user, userRepository: userRepository);
+          return HomePageParent(
+              user: state.user, userRepository: userRepository);
         } else if (state is UnauthenticatedState) {
           return LoginPageParent(userRepository: userRepository);
         }
@@ -58,5 +56,3 @@ class Appp extends StatelessWidget {
     );
   }
 }
-
-
