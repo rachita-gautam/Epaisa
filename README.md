@@ -1,12 +1,12 @@
-# Firebase User Authentication in BLoC Pattern
+Epaisa Flutter Bloc Assignment
 
 flutter_bloc package is used for BLoC implementation
 
-Feature :
+Features completed :
   - User Registration
   - User sign in
+  - Forget password
 
-## YouTube Video :
-
-https://www.youtube.com/watch?v=Lk1AHoOrK_A&t=5s
+Features not completed:
+   -Todo Implementaion
 
